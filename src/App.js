@@ -1,25 +1,54 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from 'react';
+import { uniqueId } from 'lodash';
+import fileSize from 'filesize';
 
-function App() {
+import GlobalStyle from './styles/global';
+import { Container, Content } from './styles'
+
+import Upload from './components/Upload';
+import FileList from './components/FileList';
+
+class App extends Component {
+  state = {
+    uploadedFiles: []
+  };
+
+  handleUpload = files => {
+    const uploadedFiles = files.map(file => ({
+      file,
+      id: uniqueId(),
+      name: file.name,
+      readableSize: fileSize(file.size),
+      preview: URL.createObjectURL(file),
+      progress: 0,
+      uploaded: false,
+      error: false,
+      url: null,
+    }));
+
+    this.setState({
+      uploadedFiles: this.state.uploadedFiles.concat(uploadedFiles)
+    });
+
+    
+  };
+
+  render() {
+
+    const { uploadedFiles } = this.state;
+    
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Container>
+      <Content>
+        <Upload onUpload={this.handleUpload}/>
+        {!!uploadedFiles.length && (
+            <FileList files={uploadedFiles} />
+          )}
+      </Content>
+      <GlobalStyle/>
+    </Container>
   );
+}
 }
 
 export default App;
