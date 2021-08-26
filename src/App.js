@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
 import { uniqueId } from 'lodash';
-import fileSize from 'filesize';
 
 import GlobalStyle from './styles/global';
-import { Container, Content } from './styles'
+
+import { Formulario } from "./components/formulario";
+import { Logo } from "./components/logo";
 
 import Upload from './components/Upload';
 import FileList from './components/FileList';
@@ -17,13 +18,7 @@ class App extends Component {
     const uploadedFiles = files.map(file => ({
       file,
       id: uniqueId(),
-      name: file.name,
-      readableSize: fileSize(file.size),
       preview: URL.createObjectURL(file),
-      progress: 0,
-      uploaded: false,
-      error: false,
-      url: null,
     }));
 
     this.setState({
@@ -38,15 +33,38 @@ class App extends Component {
     const { uploadedFiles } = this.state;
     
   return (
-    <Container>
-      <Content>
-        <Upload onUpload={this.handleUpload}/>
-        {!!uploadedFiles.length && (
-            <FileList files={uploadedFiles} />
-          )}
-      </Content>
-      <GlobalStyle/>
-    </Container>
+    <div>
+       <nav>
+      <Logo/>
+      </nav>
+      <section>
+
+        <h1 className="tituloPrincipal"> Você está prestes a anunciar seu produto<br/> para 1 milhão de atletas</h1>
+
+        <div className="caixa">
+          <p><strong>Você é organizador ou lojista?</strong></p>
+          <p>Tenha sua loja oficial dentro da nossa plataforma</p>
+        </div>
+
+        <div className="form">
+
+            <div className="imagens">
+            
+            {!!uploadedFiles.length && (
+              <FileList files={uploadedFiles} />
+            )}
+              <Upload onUpload={this.handleUpload}/>
+
+            <GlobalStyle/>
+            </div>
+
+        <Formulario/>     
+        </div>
+
+      </section>
+      
+    
+    </div>
   );
 }
 }
