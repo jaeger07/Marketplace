@@ -28,6 +28,18 @@ class App extends Component {
     
   };
 
+  handleDelete = async id => {
+    
+
+    this.setState({
+      uploadedFiles: this.state.uploadedFiles.filter(file => file.id !== id)
+    });
+  };
+
+  componentWillUnmount() {
+    this.state.uploadedFiles.forEach(file => URL.revokeObjectURL(file.preview));
+  }
+
   render() {
 
     const { uploadedFiles } = this.state;
@@ -51,7 +63,7 @@ class App extends Component {
             <div className="imagens">
             
             {!!uploadedFiles.length && (
-              <FileList files={uploadedFiles} />
+              <FileList files={uploadedFiles} onDelete={this.handleDelete} />
             )}
               <ButtonAddPhoto onUpload={this.handleUpload}/>
 

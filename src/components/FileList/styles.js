@@ -10,7 +10,9 @@ export const Container = styled.div.attrs({
   
 `;
 
-export const Preview = styled.div`
+export const Preview = styled.div.attrs({
+  className:"previewPhoto"
+})`
   width: 32%;
   height: 15vh;
   display: block;

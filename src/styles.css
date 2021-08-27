@@ -126,6 +126,22 @@ nav{
       margin-right: 3%;
       
     }
+    .buttonDelete{
+      height: 100%;
+      width: 100%;
+      background: transparent;
+      font-size: 0;
+    }
+    .buttonDelete:hover{
+      margin: 0 auto;
+      display: flex;
+      background: url(./imagens/btnDelete.svg) no-repeat 50% 50%,rgba(255, 255, 255, 0.7);
+      background-size: 20%;
+      height: 100%;
+      width: 100%;
+      font-size: 0;
+      cursor: pointer;
+    }
     
     .buttonAddPhoto{
       background: url("./imagens/addPhoto.svg") 50% 50% no-repeat, #FF5500;
