@@ -11,13 +11,12 @@ export const Container = styled.div.attrs({
 `;
 
 export const Preview = styled.div`
-  width: 150px;
-  height: 150px;
+  width: 32%;
+  height: 15vh;
   display: block;
-  margin-bottom: 5px;
+  margin-bottom: 10px;
   border-radius: 5px;
-  width: 100%;
-  box-shadow: 0px 3px 6px #00000029;
+  box-shadow: 0px 3px 4px #00000092;
     
   
   background-image: url(${props => props.src});
@@ -27,6 +26,6 @@ export const Preview = styled.div`
 
   &:first-child{
     width: 100%;
-    height: 220px;
+    height: 35vh;
   }
 `;

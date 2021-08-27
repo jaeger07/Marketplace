@@ -6,7 +6,7 @@ import GlobalStyle from './styles/global';
 import { Formulario } from "./components/formulario";
 import { Logo } from "./components/logo";
 
-import Upload from './components/Upload';
+import ButtonAddPhoto from './components/ButtonAddPhoto';
 import FileList from './components/FileList';
 
 class App extends Component {
@@ -53,7 +53,7 @@ class App extends Component {
             {!!uploadedFiles.length && (
               <FileList files={uploadedFiles} />
             )}
-              <Upload onUpload={this.handleUpload}/>
+              <ButtonAddPhoto onUpload={this.handleUpload}/>
 
             <GlobalStyle/>
             </div>

@@ -2,11 +2,11 @@ import styled from "styled-components";
 
 
 export const DropContainer = styled.div.attrs({
-  className: "addPhoto"
+  className: "buttonAddPhoto"
 })`
   cursor: pointer;
-  height: 150px;
-    width: 150px;
+  height: 3vw;
+    width: 90%;
     cursor: pointer;
     font-size: 0px;
 

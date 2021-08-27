@@ -62,12 +62,6 @@ nav{
       border: 1px solid #E8E8E8;
       border-radius: 4px;
     }
-    .imagens{
-      width: 37%;
-      display: inline-block;
-      margin-top: 5px;
-      margin-right: 3%;
-    }
     
     input[type=submit]{
       font: bold 12px 'Open Sans';
@@ -105,7 +99,7 @@ nav{
       width: 100%;
       height: 0;
       margin: 25px 0;
-    border-top: 1px solid #E8E8E8;
+      border-top: 1px solid #E8E8E8;
     }
     
     select {
@@ -125,33 +119,30 @@ nav{
       margin-left: 0 ;
       padding:0;
     }  
-  
-  .addPhoto{
-    background: url("./imagens/addPhoto.svg") 50% 50% no-repeat, #E8E8E8;
-    height: 9vw;
-    width: 9vw;
-    cursor: pointer;
-    font-size: 0px;
-    border-radius: 10px;
-  }
-  .addPhoto::-webkit-file-upload-button{
-    visibility: hidden;
-  }
-
-  @media screen and (max-width:999px) {
-    section{
-      width: 85vw;
-    }
     .imagens{
-      display: block;
+      width: 37%;
+      display: inline-block;
+      margin-top: 5px;
+      margin-right: 3%;
+      
     }
-  }
-  @media screen and (max-width:650px) {
-    .form{
-      flex-direction: column;
+    
+    .buttonAddPhoto{
+      background: url("./imagens/addPhoto.svg") 50% 50% no-repeat, #FF5500;
+      box-shadow: 0px 4px 4px #00000029;
+      border: 1px solid rgb(187, 73, 20);
+      cursor: pointer;
+      font-size: 0px;
+      border-radius: 10px;
+      margin: 10px auto;
+      
     }
-    .input-form{
-      margin-top: 50px;
-      width: 100%;
+    .buttonAddPhoto::-webkit-file-upload-button{
+      visibility: hidden;
     }
-  }
+    
+    @media screen and (max-width:999px) {
+      section{
+        width: 85vw;
+      }
+    }

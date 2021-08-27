@@ -4,7 +4,7 @@ import Dropzone from "react-dropzone";
 
 import { DropContainer } from "./styles";
 
-export default class Upload extends Component {
+export default class ButtonAddPhoto extends Component {
   
 
   render() {
