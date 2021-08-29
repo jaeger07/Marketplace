@@ -17,8 +17,7 @@ export const Preview = styled.div.attrs({
   height: 15vh;
   display: block;
   margin-bottom: 10px;
-  border-radius: 5px;
-  box-shadow: 0px 3px 4px #00000092;
+  box-shadow: 0px 1px 6px #00000055;
     
   
   background-image: url(${props => props.src});

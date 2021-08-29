@@ -38,7 +38,7 @@ nav{
       margin: 50px auto;
     }
     .input-form{
-      width: 60%;
+      width: 68%;
       display: block;
     }
     input{
@@ -120,11 +120,16 @@ nav{
       padding:0;
     }  
     .imagens{
-      width: 37%;
-      display: inline-block;
+      width: 30%;
+      max-height: 600px;
       margin-top: 5px;
-      margin-right: 3%;
+      margin-right: 2%;
       
+      display: grid;
+      align-items: end;
+    }
+    .margin-img{
+      height: 1px;
     }
     .buttonDelete{
       height: 100%;
@@ -135,8 +140,8 @@ nav{
     .buttonDelete:hover{
       margin: 0 auto;
       display: flex;
-      background: url(./imagens/btnDelete.svg) no-repeat 50% 50%,rgba(255, 255, 255, 0.7);
-      background-size: 20%;
+      background: url(./imagens/btnDelete.svg) no-repeat 50% 50%,rgba(255, 255, 255, 0.9);
+      background-size: 30%;
       height: 100%;
       width: 100%;
       font-size: 0;
@@ -144,13 +149,19 @@ nav{
     }
     
     .buttonAddPhoto{
-      background: url("./imagens/addPhoto.svg") 50% 50% no-repeat, #FF5500;
+      background: url("./imagens/addPhoto.svg") 50% 50% no-repeat, #E8E8E8;
       box-shadow: 0px 4px 4px #00000029;
-      border: 1px solid rgb(187, 73, 20);
+      border: 1px solid #ccc;
       cursor: pointer;
       font-size: 0px;
       border-radius: 10px;
-      margin: 10px auto;
+      
+
+      height: 30px;
+      width: 100%;
+      cursor: pointer;
+      font-size: 0px;
+      margin-bottom: 145px;
       
     }
     .buttonAddPhoto::-webkit-file-upload-button{

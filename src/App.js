@@ -61,7 +61,7 @@ class App extends Component {
         <div className="form">
 
             <div className="imagens">
-            
+              
             {!!uploadedFiles.length && (
               <FileList files={uploadedFiles} onDelete={this.handleDelete} />
             )}
