@@ -44,7 +44,7 @@ export class Formulario extends Component{
                     </fieldset>
                 </div>
             
-                    <input type="submit" value="Cadastrar produto" />
+                <input type="submit" value="Cadastrar produto" />
                 
             </div>
         );

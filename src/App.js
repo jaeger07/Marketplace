@@ -1,8 +1,6 @@
 import React, { Component } from 'react';
 import { uniqueId } from 'lodash';
 
-import GlobalStyle from './styles/global';
-
 import { Formulario } from "./components/formulario";
 import { Logo } from "./components/logo";
 
@@ -67,7 +65,6 @@ class App extends Component {
             )}
               <ButtonAddPhoto onUpload={this.handleUpload}/>
 
-            <GlobalStyle/>
             </div>
 
         <Formulario/>     
@@ -75,7 +72,6 @@ class App extends Component {
 
       </section>
       
-    
     </div>
   );
 }
