@@ -147,9 +147,6 @@ nav{
       display: grid;
       align-items: end;
     }
-    .margin-img{
-      height: 1px;
-    }
     .buttonDelete{
       height: 100%;
       width: 100%;
@@ -191,4 +188,22 @@ nav{
       section{
         width: 85vw;
       }
+    }
+    @media screen and (max-width:700px) {
+      .categorias{
+        display: block;
+      }
+      .categoria{
+        width: 100%;
+        margin-left: 0 ;
+        padding:0;
+      } 
+      div .previewPhoto{
+
+        width: 100%;
+        height: 15vh;
+      }
+     .caixaimagens{
+      flex-direction: column;
+     }
     }
