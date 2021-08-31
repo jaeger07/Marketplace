@@ -26,7 +26,17 @@ class App extends Component {
     
   };
 
+  handleDelete = async id => {
+    
 
+    this.setState({
+      uploadedFiles: this.state.uploadedFiles.filter(file => file.id !== id)
+    });
+  };
+
+  componentWillUnmount() {
+    this.state.uploadedFiles.forEach(file => URL.revokeObjectURL(file.preview));
+  }
 
   render() {
 

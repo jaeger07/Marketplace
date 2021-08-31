@@ -60,7 +60,7 @@ nav{
       width: 68%;
       display: block;
     }
-    input{
+    input, textarea{
       background: #FFFFFF 0% 0% no-repeat padding-box;
       box-shadow: 0px 3px 6px #00000029;
       border: 1px solid #E8E8E8;
@@ -99,7 +99,7 @@ nav{
     .span-descricao{
       display: block;
       text-align: right;
-      font: bold 12px 'Open Sans';
+      font: bold 12px 'Open Sans', sans-serif;
       color: #707070;
     }
     
@@ -107,10 +107,8 @@ nav{
       border: none;
     }
     legend{
-      font-family: 'Open Sans', sans-serif;
+      font: bold 13px 'Open Sans', sans-serif;
       color: #707070;
-      font-size: 13px;
-      font-weight: bold;
       margin: 10px 0;
     }
     
@@ -122,31 +120,28 @@ nav{
     }
     
     select {
-      width: 90%;
+      width: 100%;
       padding: 5px;
       margin: 2px;
-      font-family: 'Open Sans', sans-serif;
-      font-size: 10px;
+      font: 10px 'Open Sans', sans-serif;
     }
     
     .categorias{
       display: flex;
+      justify-content: space-between;
     }
     .categoria{
-      display: inline-block;
-      width: 33%;
-      margin-left: 0 ;
-      padding:0;
-    }  
-    .imagens{
       width: 30%;
-      max-height: 600px;
-      margin-top: 5px;
-      margin-right: 2%;
-      
-      display: grid;
-      align-items: end;
-    }
+    }  
+  .imagens{
+    width: 30%;
+    max-height: 600px;
+    margin-top: 5px;
+    margin-right: 2%;
+    
+    display: grid;
+    align-items: end;
+  }
     .buttonDelete{
       height: 100%;
       width: 100%;
@@ -154,8 +149,6 @@ nav{
       font-size: 0;
     }
     .buttonDelete:hover{
-      margin: 0 auto;
-      display: flex;
       background: url(./imagens/btnDelete.svg) no-repeat 50% 50%,rgba(255, 255, 255, 0.9);
       background-size: 30%;
       height: 100%;
@@ -168,20 +161,12 @@ nav{
       background: url("./imagens/addPhoto.svg") 50% 50% no-repeat, #E8E8E8;
       box-shadow: 0px 4px 4px #00000029;
       border: 1px solid #ccc;
+      border-radius: 10px;
       cursor: pointer;
       font-size: 0px;
-      border-radius: 10px;
-      
-
       height: 30px;
       width: 100%;
-      cursor: pointer;
-      font-size: 0px;
       margin-bottom: 145px;
-      
-    }
-    .buttonAddPhoto::-webkit-file-upload-button{
-      visibility: hidden;
     }
     
     @media screen and (max-width:999px) {
