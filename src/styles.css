@@ -3,6 +3,7 @@
   padding: 0;
   outline: 0;
   box-sizing: border-box;
+  
 }
 body {
   font-family: Arial, Helvetica, sans-serif;
@@ -14,23 +15,23 @@ body {
 html, body, #root {
   height: 100%;
 }
-button{
- border: none
-}
-nav{
-  padding: 1.5em 4em;
-  margin-bottom: 50px;
 
-  border-bottom: 1px solid lightgrey;
+
+  nav{
+    padding: 1.5em 4em;
+    margin-bottom: 50px;
+    border-bottom: 1px solid lightgrey;
     box-shadow: 2px 2px 2px lightgrey;
-  }
-  .logo{
-    width: 140px;
-  }
-  section{
-    width: 950px;
-    margin: 0 auto;
-  }
+    }
+    .logo{
+      width: 140px;
+    }
+
+
+section{
+  width: 850px;
+  margin: 0 auto;
+}
   .tituloPrincipal{
     text-align: center;
     margin: 50px 0 30px;
@@ -47,28 +48,29 @@ nav{
   .caixa p{
     margin: 0;
   }
+  
+  /* FORMULÁRIO */
+  
+  .form{
+    display: flex;
+    margin: 50px auto;
+  }
+  .input-form{
+    width: 75%;
+    margin-left: 3%;
+    display: block;
+  }
+  input, textarea{
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    box-shadow: 0px 3px 6px #00000029;
+    border: 1px solid #E8E8E8;
+    border-radius: 4px;
+  }
   .input-titulo{
-    padding: 5px;
+    padding: 8px 5px;
     width: 100%;
     box-sizing: border-box;
   }
-  .form{
-    display: flex;
-      margin: 50px auto;
-    }
-    .input-form{
-      width: 68%;
-      display: block;
-    }
-    input, textarea{
-      background: #FFFFFF 0% 0% no-repeat padding-box;
-      box-shadow: 0px 3px 6px #00000029;
-      border: 1px solid #E8E8E8;
-      border-radius: 4px;
-    }
-    input[type=text]{
-      padding: 8px 5px;
-    }
     input[inputmode=numeric]{
       padding: 8px 5px;
       width: 30%;
@@ -76,25 +78,8 @@ nav{
     textarea {
       resize: none;
       width: 100%;
-      padding: 2px;
+      padding: 5px;
       box-sizing: border-box;
-      border: 1px solid #E8E8E8;
-      border-radius: 4px;
-    }
-    
-    input[type=submit]{
-      font: bold 12px 'Open Sans';
-      padding: 12px;
-      color: #FFFFFF;
-      background: #FF5500;
-      box-shadow: 0px 3px 6px #00000029;
-      border: 1px solid #FFFFFF;
-      border-radius: 24px;
-      cursor: pointer;
-      margin-top: 20px;
-      margin-bottom: 80px;
-      display: block; 
-      float: right;
     }
     .span-descricao{
       display: block;
@@ -119,74 +104,100 @@ nav{
       border-top: 1px solid #E8E8E8;
     }
     
+  .categorias{
+    display: flex;
+    justify-content: space-between;
+  }
+    .categoria{
+      width: 30%;
+    }  
+    
     select {
       width: 100%;
       padding: 5px;
       margin: 2px;
       font: 10px 'Open Sans', sans-serif;
     }
-    
-    .categorias{
-      display: flex;
-      justify-content: space-between;
-    }
-    .categoria{
-      width: 30%;
-    }  
-  .imagens{
-    width: 28%;
-    max-height: 600px;
-    margin-top: 5px;
-    margin-right: 4%;
-    
-    display: grid;
-    align-items: end;
+  
+  .btnCadastrar{
+    font: bold 12px 'Open Sans';
+    padding: 12px;
+    color: #FFFFFF;
+    background: #FF5500;
+    box-shadow: 0px 3px 6px #00000029;
+    border: 1px solid #FFFFFF;
+    border-radius: 24px;
+    cursor: pointer;
+    margin-top: 20px;
+    margin-bottom: 80px;
+    display: block; 
+    float: right;
   }
-    .buttonDelete{
-      height: 100%;
-      width: 100%;
-      background: transparent;
-      font-size: 0;
-    }
-    .buttonDelete:hover{
-      background: url(./imagens/btnDelete.svg) no-repeat 50% 50%,rgba(255, 255, 255, 0.9);
-      background-size: 30%;
-      height: 100%;
-      width: 100%;
-      font-size: 0;
-      cursor: pointer;
-    }
-    
-    .buttonAddPhoto{
-      background: url("./imagens/addPhoto.svg") 50% 50% no-repeat, #E8E8E8;
-      background-size: 40%;
-      cursor: pointer;
-      height: 140px;
-      width: 48%;
-      margin-bottom: 145px;
-      margin-left: 52%;
-    }
-    
-    @media screen and (max-width:999px) {
-      section{
-        width: 85vw;
-      }
-    }
-    @media screen and (max-width:700px) {
-      .categorias{
-        display: block;
-      }
-      .categoria{
-        width: 100%;
-        margin-left: 0 ;
-        padding:0;
-      } 
-      div .previewPhoto{
 
-        width: 100%;
-        height: 15vh;
-      }
-     .caixaimagens{
-      flex-direction: column;
-     }
+/* ASIDE*/
+
+.imagens{
+  width: 22%;
+  display:flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-end;
+}
+.descricao-imagens{
+  width: 100%;
+  font-size: 12px;
+}
+  .buttonDelete{
+    height: 100%;
+    width: 100%;
+    background: transparent;
+    font-size: 0;
+    border: 0;
+  }
+    .buttonDelete:hover{
+      transition: ease-in .5s;
+      background: url(./imagens/btnDelete.png) no-repeat 50% 50%,rgba(15, 15, 15, 0.7);
+      background-size: 40%;
+      height: 100%;
+      width: 100%;
+      font-size: 0;
+      cursor: pointer;
     }
+    
+  .buttonAddPhoto{
+    background: url("./imagens/addPhoto.svg") 50% 50% no-repeat, #E8E8E8;
+    background-size: 40%;
+    cursor: pointer;
+    height: 95px;
+    width: 50%;
+    min-width: 95px;
+  }
+    
+@media screen and (max-width:999px) {
+  section{
+    width: 90vw;
+  }
+  .buttonAddPhoto{
+    background-size: 40%;
+    height: 120px;
+    width: 48%;
+  }
+}
+@media screen and (max-width:700px) {
+  .categorias{
+    display: block;
+  }
+    .categoria{
+      width: 100%;
+      margin-left: 0 ;
+      padding:0;
+    } 
+  div .previewPhoto{
+    
+    width: 100%;
+    height: 15vh;
+  }
+  .caixaimagens{
+    flex-direction: column;
+  }
+}

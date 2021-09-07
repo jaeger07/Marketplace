@@ -1,19 +1,19 @@
 import React, { Component } from "react"
 import CurrencyInput from "./maskedinput";
 
-export class Formulario extends Component{
+export default class Formulario extends Component{
 
     render(){
         return(
-            <div class="input-form">
+            <form className="input-form">
                 <legend>Título do produto</legend>
-                <input type="text" class="input-titulo" required ></input>
+                <input type="text" className="input-titulo" required ></input>
+
                 <legend>Preço</legend>
-                
                 <CurrencyInput />
 
                 <legend>Descrição</legend>
-                <textarea rows="8"/>
+                <textarea rows="8" className="descricao-produto"/>
                 <span className="span-descricao" >0/500</span>
                 
                 <div className="checks">
@@ -23,20 +23,20 @@ export class Formulario extends Component{
                     <span> Produto usado </span>
                 </div>
                 <div className="linha"></div>
-                <div class="categorias">
-                    <fieldset class="categoria">
+                <div className="categorias">
+                    <fieldset className="categoria">
                         <legend>Departamento</legend>
                         <select  >
                             <option>Bikes</option>
                         </select>
                     </fieldset>
-                    <fieldset class="categoria">
+                    <fieldset className="categoria">
                         <legend>Categoria</legend>
                         <select >
                             <option>Mountain bike</option>
                         </select>
                     </fieldset>
-                    <fieldset class="categoria">
+                    <fieldset className="categoria">
                         <legend>Subcategoria</legend>
                         <select>
                             <option>Bikes</option>
@@ -44,9 +44,9 @@ export class Formulario extends Component{
                     </fieldset>
                 </div>
             
-                <input type="submit" value="Cadastrar produto" />
+                <button type="submit" className="btnCadastrar">Cadastrar produto</button>
                 
-            </div>
+            </form>
         );
     }
 }

@@ -14,7 +14,7 @@ export const Preview = styled.div.attrs({
   className:"previewPhoto"
 })`
   width: 48%;
-  height: 140px;
+  height: 95px;
   display: block;
   margin-bottom: 10px;
   box-shadow: 0px 1px 6px #00000055;
@@ -27,6 +27,6 @@ export const Preview = styled.div.attrs({
 
   &:first-child{
     width: 100%;
-    height: 200px;
+    height: 150px;
   }
 `;

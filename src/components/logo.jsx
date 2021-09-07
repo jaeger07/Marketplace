@@ -1,6 +1,6 @@
 import React, { Component } from "react"
 
-export class Logo extends Component{
+export default class Logo extends Component{
 
     render(){
         return(

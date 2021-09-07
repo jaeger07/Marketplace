@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import { uniqueId } from 'lodash';
 
-import { Formulario } from "./components/formulario";
-import { Logo } from "./components/logo";
+import  Formulario  from "./components/formulario";
+import  Logo  from "./components/logo";
 
 import ButtonAddPhoto from './components/ButtonAddPhoto';
 import FileList from './components/FileList';
@@ -57,19 +57,18 @@ class App extends Component {
         </div>
 
         <div className="form">
-
             <div className="imagens">
-              
-            {!!uploadedFiles.length && (
-              <FileList files={uploadedFiles} onDelete={this.handleDelete} />
-            )}
-              <ButtonAddPhoto onUpload={this.handleUpload}/>
 
+              <legend className="descricao-imagens">fotos (capriche)</legend>
+
+              {!!uploadedFiles.length && (
+                <FileList files={uploadedFiles} onDelete={this.handleDelete} />
+              )}
+                <ButtonAddPhoto onUpload={this.handleUpload}/>
             </div>
 
-        <Formulario/>     
+            <Formulario/>     
         </div>
-
       </section>
       
     </div>
