@@ -1,8 +1,6 @@
 import React, { Component } from "react";
-
 import Dropzone from "react-dropzone";
 
-import { DropContainer } from "./styles";
 
 export default class ButtonAddPhoto extends Component {
   
@@ -13,12 +11,12 @@ export default class ButtonAddPhoto extends Component {
     return (
       <Dropzone accept="image/*" onDropAccepted={onUpload}>
         {({ getRootProps, getInputProps}) => (
-          <DropContainer
+          <div className="buttonAddPhoto"
             {...getRootProps()}
           
           >
             <input {...getInputProps()} />
-          </DropContainer>
+          </div >
         )}
       </Dropzone>
     );

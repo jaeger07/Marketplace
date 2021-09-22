@@ -19,7 +19,6 @@ export const Preview = styled.div.attrs({
   margin-bottom: 10px;
   box-shadow: 0px 1px 6px #00000055;
     
-  
   background-image: url(${props => props.src});
   background-repeat: no-repeat;
   background-size: cover;

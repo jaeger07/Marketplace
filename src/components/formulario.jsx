@@ -1,4 +1,5 @@
 import React, { Component } from "react"
+import { Container } from "./FileList/styles";
 import CurrencyInput from "./maskedinput";
 
 export default class Formulario extends Component{
@@ -11,7 +12,6 @@ export default class Formulario extends Component{
 
                 <legend>Preço</legend>
                 <CurrencyInput />
-
                 <legend>Descrição</legend>
                 <textarea rows="8" className="descricao-produto"/>
                 <span className="span-descricao" >0/500</span>
