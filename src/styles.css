@@ -141,7 +141,7 @@ section{
   display:flex;
   flex-direction: column;
   justify-content: flex-start;
-  align-items: flex-end;
+  align-items: flex-start;
 }
 .descricao-imagens{
   width: 100%;
