@@ -155,7 +155,6 @@ section{
     border: 0;
   }
     .buttonDelete:hover{
-      transition: ease-in .5s;
       background: url(./imagens/btnDelete.png) no-repeat 50% 50%,rgba(15, 15, 15, 0.7);
       background-size: 40%;
       height: 100%;
